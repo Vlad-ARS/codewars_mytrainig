@@ -7,9 +7,14 @@ Kata.getMiddle("middle") should return "dd"
 Kata.getMiddle("A") should return "A"
 
 
-MY solution
+MY SOLUTION 1:
 def get_middle(s):
     if len(s) % 2 == 0:
         return  s[int((len(s) / 2) - 1): int(len(s) / 2) + 1]
     else:
         return s[int((len(s) + 1) / 2) - 1]
+
+MY SOLUTION 2:
+def get_middle(s):
+    ind, ost = divmod(len(s), 2)
+    return s[ind] if ost != 0 else s[ind-1: ind+1]
