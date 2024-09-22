@@ -10,3 +10,8 @@ patrick feeney => P.F
 MY SOLUTION 1:
 def abbrev_name(name):
     return '.'.join(i for i in name.title() if i.isupper())
+
+MY SOLUTION 2:
+def abbrevName(name):
+    first, last = name.upper().split(' ')
+    return first[0] + '.' + last[0]
