@@ -17,3 +17,7 @@ def order(sentence):
         for w in sentence.split():
             if str(i) in w and w not in new_list: new_list.append(w)
     return ' '.join(i for i in new_list)
+
+MY_SOLUTION2:
+def order(sentence):
+    return " ".join(sorted(sentence.split(), key=min))
