@@ -1,0 +1,10 @@
+TASK:
+Move every letter in the provided string forward 10 letters through the alphabet.
+If it goes past 'z', start again at 'a'.
+Input will be a string with length > 0.
+
+
+
+MY_SOLUTION:
+def move_ten(st):
+    return ''.join([chr(ord(i) + 10) if ord(i) <= 112 else chr(ord(i) - 16) for i in st])
